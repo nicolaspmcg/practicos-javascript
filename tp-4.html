@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		while (confirm("Quiere seguir ingresando películas?")) {
+
+			function agregarPeliculas() {
+
+					var titulo = prompt("Ingrese titulo");
+					var id = parseInt(prompt("Ingrese un ID"));
+					var descripcion = prompt("Ingrese la descripcion");
+					var año = parseInt(prompt("Ingrese el año"));
+					var duracion = parseInt(prompt("Ingrese la duración"));
+					var actores = [];
+					var actor = prompt("Ingrese un actor");
+					actores.push(actor);
+					while (confirm("Quiere seguir agregando actores?")) {
+						actores.push(prompt("Ingrese un actor"));
+					}
+
+					var director = prompt("Ingrese el director");
+
+				function Pelicula(tituloP) {
+					this.id = null;
+					this.titulo = tituloP;
+					this.descripcion = "";
+					this.año = 0;
+					this.duracion = 0;
+					this.actores = [];
+					this.director = "";
+				}
+
+				var peli = new Pelicula(titulo);
+				peli.id = id;
+				peli.descripcion = descripcion;
+				peli.año = año;
+				peli.duracion = duracion;
+				peli.actores = actores;
+				peli.director = director;
+
+				console.log(peli);
+
+			}
+
+		agregarPeliculas();
+
+		}
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	var textoResultado = "El resultado es: "
+
+	function sumar(numero1, numero2) {
+		alert(textoResultado + (numero1 + numero2));
+	}
+	function restar(numero1, numero2) {
+		alert(textoResultado + (numero1 - numero2));
+	}
+	function multiplicar(numero1, numero2) {
+		alert(textoResultado + (numero1 * numero2));
+	}
+	function dividir(numero1, numero2) {
+		alert(textoResultado + (numero1 / numero2));
+	}
+
+	function calculadora(numero1, numero2) {
+		var numero1 = parseInt(prompt("Ingrese un número"));
+		var numero2 = parseInt(prompt("Ingrese otro número"));
+		var operacion = prompt("Qué quiere hacer? (sumar, restar, multiplicar o dividir)");
+
+		if(numero1 || numero2) {
+			switch (operacion) {
+				case "sumar":
+					sumar(numero1, numero2);
+					break;
+				case "restar":
+					restar(numero1, numero2);
+					break;
+				case "multiplicar":
+					multiplicar(numero1, numero2);
+					break;
+				case "dividir":
+					dividir(numero1, numero2);
+					break;
+				default:
+					alert("Hubo un error, vuelva a ingresar los números");
+			}
+		} else {
+			alert("Hubo un error, vuelva a ingresar los números");
+		}
+	}
+
+	calculadora();
+
+	</script>
+
+</body>
+</html>
